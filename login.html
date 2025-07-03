@@ -52,7 +52,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
       alert(data.message || "Login successful!");
       localStorage.setItem("token", data.token);
       localStorage.setItem("username", data.user.username);
-      window.location.href = "projs.html";
+      window.location.href = "index.html";
     } else {
       alert(data.message || "Login failed.");
     }
