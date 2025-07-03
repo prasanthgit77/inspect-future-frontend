@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Inspect Future</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <section class="home">
+    <div class="home-content">
+      <h1>Login to <span>Inspect Future</span></h1>
+      <form id="loginForm" class="form-box" style="max-width: 400px; margin-top: 2rem;">
+        <div class="input-box">
+          <span class="icon"><i class='bx bx-envelope'></i></span>
+          <input type="email" required name="email" />
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <span class="icon"><i class='bx bx-lock'></i></span>
+          <input type="password" required name="password" />
+          <label>Password</label>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>Don't have an account? <a href="signup.html">Signup</a></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const email = e.target.email.value;
+  const password = e.target.password.value;
+
+  try {
+    const res = await fetch("http://localhost:3030/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert(data.message || "Login successful!");
+      // Optionally store token
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("username", data.user.username);
+      window.location.href = "projs.html";
+    } else {
+      alert(data.message || "Login failed.");
+    }
+  } catch (err) {
+    alert("Something went wrong.");
+    console.error(err);
+  }
+});
+</script>
+</body>
+
+</html>

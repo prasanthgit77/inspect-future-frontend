@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2-1 Subjects | Inspect Future</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #081b29;
+      color: #fff;
+    }
+
+    .subjects-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 100px;
+    }
+
+    .subjects-section h1 {
+      font-size: 3rem;
+      color: #0ef;
+      margin-bottom: 40px;
+    }
+
+    .subjects-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    .subject-box {
+      background: #112e42;
+      border: 2px solid #0ef;
+      border-radius: 15px;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      width: 240px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+    }
+
+    .subject-box:hover {
+      transform: scale(1.05);
+      background-color: #0ef;
+      color: #081b29;
+    }
+
+    @media (max-width: 600px) {
+      .subject-box {
+        width: 90%;
+      }
+
+      .subjects-section h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="subjects-section">
+    <h1>2-1 Subjects</h1>
+    <div class="subjects-container">
+      <a href="ddms.html" class="subject-box">DMS</a>
+      <a href="ds.html" class="subject-box">DS</a>
+      <a href="java.html" class="subject-box">JAVA</a>
+      <a href="os.html" class="subject-box">OS</a>
+      <a href="se.html" class="subject-box">SE</a>
+    </div>
+  </section>
+
+</body>
+</html>
