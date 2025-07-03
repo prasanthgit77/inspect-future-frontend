@@ -38,7 +38,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
   const password = e.target.password.value;
 
   try {
-    const res = await fetch("http://localhost:3030/api/login", {
+    const res = await fetch("https://inspect-future-backend.onrender.com/api/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -50,7 +50,6 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
     if (res.ok) {
       alert(data.message || "Login successful!");
-      // Optionally store token
       localStorage.setItem("token", data.token);
       localStorage.setItem("username", data.user.username);
       window.location.href = "projs.html";
@@ -64,5 +63,4 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 });
 </script>
 </body>
-
 </html>
