@@ -618,6 +618,104 @@ margin-bottom: 3rem;
   color: #aaa;
   font-size: 1.8rem;
 }
+/* === Responsive Design for Mobile Devices === */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+
+  .home {
+    flex-direction: column;
+    padding: 4rem 5%;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 3.6rem;
+  }
+
+  .home-content h3 {
+    font-size: 2.4rem;
+  }
+
+  .home-content p {
+    font-size: 1.4rem;
+  }
+
+  .courses-container {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .form-box {
+    padding: 2rem;
+    margin: 0 1rem;
+    box-shadow: none;
+  }
+
+  .form-box .input-box input {
+    font-size: 1.4rem;
+  }
+
+  .form-box .input-box label {
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  #auth-buttons,
+  #logout-button {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+
+  .btn {
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+  }
+
+  .wrapper,
+  .wrapper.active-popup {
+    width: 90%;
+    height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .wrapper3 .button-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .button-row button {
+    width: 100%;
+    font-size: 2rem;
+  }
+
+  .acc-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .acc-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-iconTop {
+    margin-top: 1rem;
+  }
+}
 
 
 
